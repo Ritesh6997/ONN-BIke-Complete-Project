@@ -1,0 +1,107 @@
+#Py-container {
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+.h3 {
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 22px;
+
+    
+}
+
+#py-option {
+
+    width: 55%;
+    height: 100%;
+    padding: 20px;
+    padding-right: 0px;
+
+}
+
+.py-inner {
+    width: 80%;
+    margin: auto;
+    margin-left: 120px;
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 18px;
+    height: 60px;
+    padding: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-img {
+    width: 12%;
+}
+
+.card-text p {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+#py-booking {
+    width: 40%;
+    height: 100%;
+
+}
+
+.btn-go {
+    font-size: 15px;
+    padding: 5px 25px;
+    border: 1px solid #1E2D51;
+    border-radius: 20px;
+    background-color: #1E2D51;
+    color: white;
+}
+
+.boo-inner {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    margin-right: 100px;
+    background-color: #ffffff;
+
+}
+
+.bike-info {
+    height: 200px;
+    font-family: sans-serif;
+    border: 2px solid whitesmoke;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.bike-name {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+    align-items: center;
+    font-size: 19px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #1E2D51;
+
+}
+
+.bike-time {
+    padding: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.bike-status {
+    color: #333333;
+
+}
+
+.bike-py-details {
+    padding: 2px;
+    border: 2px solid whitesmoke;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

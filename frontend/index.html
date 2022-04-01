@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ONN BIKES</title>
+  <link rel="icon" href="https://www.onnbikes.com/img/ONN-logo-unit-without-shadow.png" type="image/gif">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/Fleet.css">
+    <link rel="stylesheet" href="./style/register.css">
+    <link rel="stylesheet" href="./style/form.css">
+    <link rel="stylesheet" href="./style/navbar.css">
+</head>
+<body>
+	<div id="navbar">
+		
+	</div>
+    
+<div id="header" style="display: flex;flex-direction: column; justify-content: center">
+    
+<div id="cont_vam" >
+    <!-- <div class="modal-dialog">
+       <div class="modal-content"> -->
+     <div id="Place">
+       <div id="boxu">
+         <div class="row g-2">
+           <div class="col-md">
+             <div class="form-floating">
+               <select  class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                 <option value="0">BENGALURU</option>
+                 <option  value="1">GURUGRAM</option>
+                 <option  value="2">HYDERABAD</option>
+                 <option value="3">JAIPUR</option>
+                 <option value="4">AHMEDABAD</option>
+               </select>
+               <label for="floatingSelectGrid"></label>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div id="boxd"></div>
+     </div>
+     <div id="Slider" class="carousel slide" data-bs-ride="carousel" data-width="100%" >
+       <!-- <button type="button" class="btn-close" aria-label="Close"></button> -->
+       <button class="btn-close" id="close"></button>
+       <div class="carousel-inner">
+         <div class="carousel-item  active ">
+             <div id="grid1"></div> 
+         </div>
+         <div class="carousel-item" >
+           <div id="grid2"></div>
+         </div>
+         <div class="carousel-item" >
+           <div id="grid3"></div> 
+         </div>
+         <div class="carousel-item" >
+           <div id="grid4"></div> 
+         </div>
+         <div class="carousel-item" >
+           <div id="grid5"></div> 
+         </div>
+         <div class="carousel-item" >
+           <div id="grid6"></div> 
+         </div>
+         <div class="carousel-item" >
+           <div id="grid7"></div> 
+         </div>
+         <div class="carousel-item" >
+           <div id="grid8"></div> 
+         </div>
+         <div class="carousel-item" >
+           <div id="grid9"></div> 
+         </div>
+       </div>
+       <button class="carousel-control-prev" type="button" data-bs-target="#Slider" data-bs-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
+       </button>
+       <button class="carousel-control-next" type="button" data-bs-target="#Slider" data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
+       </button>
+     </div>
+     </div>
+
+     <div id="search_div" style="margin:auto;gap: 0px;"> 
+      <select name=""onchange="savecityname()" id="selecttag_div"style="padding: 12px;">
+      <option value="" >Select City</option>
+       <option value="BANGALURU">BANGALURU</option>
+       <option value="GURUGRAM">GURUGRAM</option>
+       <option value="HYDERABAD">HYDERABAD</option>
+       <option value="JAIPUR">JAIPUR</option>
+       <option value="AHMEDABAD">AHMEDABAD</option>
+     </select>
+        <select ><option>HOURLY/DAILY</option></select>
+     <input class="ride" type="datetime-local" name="" id="startdate" onclick="startdate()" min="2022-2-25">
+     <input class="ride" type="datetime-local" name="" onclick="enddate()" id="enddate">
+     <button onclick="savedate()">Ride Now</button>
+    </div>
+	
+</div>
+<!-- shakh bhai -->
+<div id="container-g">
+
+</div>               
+<!-- shaikh bhai -->
+<!-- footer -->
+<div id="footer_" style="width: 100%;"></div>
+<!-- footer -->
+<!-- shivam -->
+<!-- Login Pop up -->
+<div  class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+       
+
+      <div class="modal-content ">
+            <button style="background-color: aliceblue;" id="closepopup_vam"type="button" class="btn-close btn-outline-light" data-bs-dismiss="modal" aria-label="Close"></button>
+ 
+         
+        <!-- Card inside Modal -->
+        <div class="card " style="max-width: 940px;">
+            <div class="row ">
+              <div class="col-6">
+                <img id="popup_img_vam"src="https://pbs.twimg.com/media/FFMejIRUYAEZkOY?format=jpg&name=large" alt="...">
+              </div>
+              <div class="col-6">
+                <div class="card-body">
+                  <h5 class="card-title"><span class="gayab2_vam">LOGIN</span> |<span class="gayab_vam">SIGNUP</span>  </h5>
+                  <div id="google-sign-in_vam" class="row">
+                      <button class="col-5 m-2 btn-primary p-1" >Facebook</button>
+                      <button class="col-5 m-2 btn-danger p-1">Google</button>
+                  </div>
+                  <div id="login_vam">
+                   <form>
+                       <input type="email" id="email_vam" placeholder="Email">
+                       <input type="password" id="login-password_vam" placeholder="Password">
+                   </form>
+                   <button id="btn-login_vam">Login</button>
+                   <a href="#" id="toggle_vam">New to ONN BIKES? Signup</a>
+                  </div>
+                  <div id="signup_vam">
+                    <form>
+                        <div class="row">
+                            <input class="col" type="text" id="sfname_vam" placeholder="First Name">
+                            <input class="col" type="text" id="slname_vam" placeholder="Last Name">
+                        </div>
+                        <div class="row">
+                            <input  class="col" type="email" id="semail_vam" placeholder="Email">
+                            <input  class="col" type="number" id="smb_vam" placeholder="Mobile Number">
+                        </div>
+                        <div class="row">
+                            <input  class="col-5" type="password" id="signup-password_vam" placeholder="Password">
+                        </div>
+                       
+                        
+                        
+                    </form>
+                    <button id="btn-signup_vam">Signup</button>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- ------------------------------------------------------------------------>
+
+      </div>
+    </div>
+  </div>
+   
+   <!-- shivam -->
+	
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="./script/navbar.js"></script>
+<script src="./script/index.js"></script>
+<script type="module">
+  // footer----------------
+     import footer from "./components/footer.js"
+    let footer_div=document.getElementById("footer_");
+    footer_div.innerHTML=footer()
+    // footer-------------------------
+    // header-----------------------
+    import header from "./components/header.js"
+    let navbar_div=document.getElementById("navbar");
+    navbar_div.innerHTML=header();
+    // heaader----------------------
+    
+    // form container--------------
+    import home from "./components/from.js"
+    let container_div = document.getElementById("container-g");
+    container_div.innerHTML=home()
+    // form container----------------
+
+    //  welcome --------
+let Current_UserLogin=JSON.parse(localStorage.getItem("Current_User"));
+if (Current_UserLogin!=null)
+{
+  let welcome_div=document.getElementById("welcome");
+  let mister=document.getElementById("Mister");
+  welcome_div.style.display="none"
+  
+
+   document.querySelector("#Mister").style.display="inline-block"
+   //document.querySelector("#misterindia").style.display="block";
+   document.querySelector("#classnone").textContent=Current_UserLogin[0].first_name;
+  //  welcome signout--------
+  document.querySelector("#signout_div").addEventListener("click",signOut)
+  let Current_User=JSON.parse(localStorage.getItem("Current_User"));
+    function signOut()
+  {
+    localStorage.removeItem("Current_User");
+    window.location.href="./index.html"
+  }
+ 
+}
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!--  -->
+
+
+<!--  -->
+
+<!-- shivam -->
+<script src="./data/bikedata.js"></script>
+<script src="./script/LoginSignup.js"></script>
+<script src="./data/PlacesData.js"></script>
+<script type="module">
+  //Getting Bikes Data
+  let Data=JSON.parse(localStorage.getItem("product_Data"));
+ 
+
+
+  //importing the append function
+  import displaydata from "./data/appendSliderData.js"
+  
+
+  //Button for Slider to get Started
+  document.querySelector("#fleet_vam").addEventListener("click",()=>{
+    document.querySelector("#cont_vam").style.display="flex";
+    // document.querySelector("#header").textContent=""
+    //console.log("div")
+  })
+
+
+
+  //Appending Bike data to slider
+  let grid1=document.querySelector("#grid1") 
+  displaydata(Data,grid1,2,0)
+  let grid2=document.querySelector("#grid2") 
+  displaydata(Data,grid2,5,3)
+  let grid3=document.querySelector("#grid3") 
+  displaydata(Data,grid3,8,6)
+  let grid4=document.querySelector("#grid4") 
+  displaydata(Data,grid4,11,9)
+  let grid5=document.querySelector("#grid5") 
+  displaydata(Data,grid5,14,12)
+  let grid6=document.querySelector("#grid6") 
+  displaydata(Data,grid6,17,15)
+  let grid7=document.querySelector("#grid7") 
+  displaydata(Data,grid7,20,18)
+  let grid8=document.querySelector("#grid8") 
+  displaydata(Data,grid8,23,21)
+  let grid9=document.querySelector("#grid9") 
+  displaydata(Data,grid9,26,24)
+
+//Close the Slider with Close Button
+  let close=document.querySelector("#close").addEventListener("click",Close_Slider)
+  function Close_Slider(){
+    
+    document.querySelector("#cont_vam").style.display="none";
+  }
+
+  //Khel
+  var stops=JSON.parse(localStorage.getItem("Places_Data"));
+  let boxd=document.querySelector("#boxd");
+  
+  document.querySelector("#floatingSelectGrid").addEventListener("change",display);
+  function display(){
+    var value=document.querySelector("#floatingSelectGrid").value||0;
+    boxd.textContent="";
+      stops.map((elem,i)=>{
+        if(value==i){
+          //console.log(value,i,elem.stop1,elem.stop2)
+          let ul=document.createElement("ul");
+          let li1=document.createElement("li");
+          li1.textContent=elem.stop1;
+          let li2=document.createElement("li");
+          li2.textContent=elem.stop2;
+          let li3=document.createElement("li");
+          li3.textContent=elem.stop3;
+          let li4=document.createElement("li");
+          li4.textContent=elem.stop4;
+          let li5=document.createElement("li");
+          li5.textContent=elem.stop5;
+          ul.append(li1,li2,li3,li4,li5);
+          boxd.append(ul);
+        }
+      })
+     
+    
+  }
+  //console.log(value);
+  display()
+  // console.log(value);
+  // if(value==1){
+  //   city[value].map((elem)=>{
+  //     console.log("elem");
+  //   })
+  // }
+  
+</script>
+
+
+
+
+
+
+
+

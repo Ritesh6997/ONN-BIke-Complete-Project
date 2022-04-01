@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#main_container,.end_div,#product_container>div,.img_div{
+    display: flex;
+    justify-content: space-between;
+}
+#fliter_div{
+    width: 15%;
+    padding-left: 1%;
+    height: 500px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#product_container{
+width: 80%;
+display: grid;
+grid-template-columns:repeat(4,1fr) ;
+grid-gap: 40px;
+}
+#product_container>div{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    flex-direction: column;
+    padding: 10px 25px;
+}
+#product_container>div:hover{
+    border: solid rgb(189, 178, 178);
+}
+.img_div img{
+    width: 100%;
+}
+.tag_div{
+    margin-top: 10px;
+    height: 20px;
+    padding: 5px 10px;
+    text-align:center ;
+    font-size: large;
+    display: inline-block;
+    background-color: #2dc484;
+}
+.end_div span{
+    padding: 15px;
+    font-size: x-large;
+    box-shadow: rgba(153, 149, 149, 0.45) 0px 25px 20px -20px;
+}
+.end_div button{
+    padding: 20px;
+    font-size: large;
+    border: 0ch;
+    background-color: rgb(11, 11, 63);
+    color: white;
+}
+.km_div{
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.km_div span{
+    margin-right: 10px;
+    font-size: large;
+    color: gray;
+}
+#manufacturer,#model,#vehecal_type{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-left:2%;
+    height: 90px;
+    overflow-y: scroll;
+    margin-right: 5px;
+    text-transform: capitalize;
+    }
+#manufacturer div,#model div,#vehecal_type div{
+    margin-bottom: 10px;
+}
+	</style>
+</head>
+<body>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="main_container">
+       <div id="fliter_div"><h2>FILTER</h2>
+           <div> <h3>MANUFACTURER</h3>
+               <div id="manufacturer">
+                
+                    <div><input type="checkbox" class="checked_value" value="Suzuki">Suzuki </div>
+                    <div><input type="checkbox" class="checked_value" value="Honda">Honda </div>          
+                    <div><input type="checkbox" class="checked_value" value="Hero">Hero</div>
+                    <div><input type="checkbox" class="checked_value" value="TVS">TVS </div>
+                    <div><input type="checkbox" class="checked_value" value="KTM">KTM </div>
+                    <div><input type="checkbox" class="checked_value" value="Bajaj">Bajaj</div>      
+                    <div><input type="checkbox" class="checked_value" value="Royal Enfield">Royal Enfield</div>
+                </div>
+            </div>
+           <div><h3>MODEL</h3>
+               <div id="model">
+                    <div><input type="checkbox" class="checked_value" value="Pulsar"> Pulsar</div>
+                    <div><input type="checkbox" class="checked_value" value="Activa 125"> Activa </div>  
+                    <div><input type="checkbox" class="checked_value" value="Avenger"> Avenger</div>
+               </div>
+           </div>
+           <div>
+               <h3>VEHECAL TYPE</h3>
+               <div id="vehecal_type">
+                    <div><input type="checkbox" class="checked_value" value="Moped"> scooter</div>
+                    <div><input type="checkbox" class="checked_value" value="Bike"> Motorcycle</div>
+               </div>
+           </div>
+       </div> 
+    <div id="product_container">
+
+    </div>
+</div>
+</body>
+</html>
+<script type="module" src="./product.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+	
+
+let DataP=[
+{
+    img:"https://images.carandbike.com/bike-images/large/bajaj/avenger-cruise-220/bajaj-avenger-cruise-220.jpg?v=11",
+    comp_name:"Bajaj", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:289,
+    Weekly:1099,
+    monthly:4899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Avenger Cruise 220",
+    
+},
+
+{
+    img:"https://bd.gaadicdn.com/processedimages/bajaj/bajaj-avenger-street-150/640X309/v_avenger-street-1501519631136.jpg",
+    comp_name:"Bajaj", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:199,
+    Weekly:899,
+    monthly:3899,
+    count:3,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Avenger Street 150",
+},
+
+{
+    img:"https://images.news18.com/ibnlive/uploads/2021/02/1614062615_new-bajaj-pulsar-180.png",
+    comp_name:"Bajaj", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:3,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Pulser 180",
+},
+
+{
+    img:"https://media.zigcdn.com/media/content/2021/Nov/34293314-pulsaaa_560x420.jpg",
+    comp_name:"Bajaj", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:369,
+    Weekly:1599,
+    monthly:7899,
+    count:4,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Pulser 220",
+},
+
+{
+    img:"https://images.carandbike.com/bike-images/colors/bajaj/pulsar-200-ns/bajaj-pulsar-200-ns-pewter-grey.png?v=1603949424",
+    comp_name:"Bajaj", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:469,
+    Weekly:1899,
+    monthly:8899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Pulser 200Ns",
+},
+
+{
+    img:"https://cdn.shopify.com/s/files/1/0579/3287/3884/products/pulsar-rs200_480x480.png?v=1643197249",
+    comp_name:"Bajaj", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:269,
+    Weekly:999,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Pulser 200",
+},
+
+{
+    img:"https://cdn.shopify.com/s/files/1/0579/3287/3884/products/pulsar-rs200_480x480.png?v=1643197249",
+    comp_name:"Hero", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Splendor Plus",
+},
+{
+    img:"https://bikes24india.com/wp-content/uploads/2021/07/hero-splendor-ismart-spoke-755.jpg",
+    comp_name:"Hero", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Splendor iSmart",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2020/Feb/shine_600x400.jpg",
+    comp_name:"Honda", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Shine",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2019/Sep/2019-activa-125-right-side-view_600x400.jpg",
+    comp_name:"Honda", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Moped",
+    name:"Activa 125",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2021/Sep/right-side-view-570148376_930x620.jpg",
+    comp_name:"TVS", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Moped",
+    name:"NTORQ 125",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2021/Oct/right-side-view-371648238_930x620.jpg",
+    comp_name:"TVS", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:199,
+    Weekly:1099,
+    monthly:4099,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Moped",
+    name:"Jupiter 125",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2021/Oct/front-right-view-944617742_930x620.jpg",
+    comp_name:"Suzuki", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Moped",
+    name:"Access 125",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2020/Oct/suzuki-gixxer-a-right-side-view_600x400.jpg",
+    comp_name:"Suzuki", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:469,
+    Weekly:1599,
+    monthly:4899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Gixxer",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2020/Apr/rtr-160-bs6_600x400.jpg",
+    comp_name:"TVS", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:469,
+    Weekly:1799,
+    monthly:5899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Apache RTR 160",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2020/Mar/royal-enfield-bullet-350-right-side-view_600x400.jpg",
+    comp_name:"Royal Enfield", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:569,
+    Weekly:2799,
+    monthly:13899,
+    count:6,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Bullet 350",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2021/Sep/2021-classic-350_600x400.jpg",
+    comp_name:"Royal Enfield", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:669,
+    Weekly:3799,
+    monthly:16899,
+    count:4,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Classic 350",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2021/Mar/right-side-view-1796007878_930x620.jpg",
+    comp_name:"Royal Enfield", 
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:969,
+    Weekly:5999,
+    monthly:18899,
+    count:3,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Continental GT 650",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2020/Mar/ktm-390-duke-bs6-right-side-view_600x400.jpg",
+    comp_name:"KTM",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 2/4km",
+    type:"Bike",
+    name:"390 Duke",
+},
+{
+    img:"https://media.zigcdn.com/media/model/2020/Jan/250-duke_600x400.jpg",
+    comp_name:"KTM",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:569,
+    Weekly:3799,
+    monthly:11899,
+    count:5,
+    minimum_billing:"RS 2/4km",
+    type:"Bike",
+    name:"250 Duke",
+},
+{
+    img:"https://images.carandbike.com/bike-images/colors/honda/cb-unicorn-160/honda-cb-unicorn-160-imperial-red-metallic.webp?v=14",
+    comp_name:"Honda",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"CB Unicorn 160",
+},
+{
+    img:"https://images.carandbike.com/bike-images/colors/bajaj/pulsar-150/bajaj-pulsar-150-neon-red.webp?v=57",
+    comp_name:"Bajaj",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Pulsar 150",
+},
+{
+    img:"https://images.carandbike.com/bike-images/colors/bajaj/platina-100/bajaj-platina-100-black.webp?v=27",
+    comp_name:"Bajaj",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Platina 100",
+},
+{
+    img:"https://images.carandbike.com/bike-images/colors/hero/super-splendor/hero-super-splendor-heavy-grey.webp?v=25",
+    comp_name:"Hero",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Super Splendor",
+},
+{
+    img:"https://images.carandbike.com/bike-images/colors/hero/xtreme-160r/hero-xtreme-160r-pearl-silver-white.webp?v=10",
+    comp_name:"Hero",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:369,
+    Weekly:1099,
+    monthly:6899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"Xtreme 160R",
+},
+{
+    img:"https://images.carandbike.com/bike-images/colors/tvs/xl-100/tvs-xl-100-luser-gold.webp?v=13",
+    comp_name:"TVS",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Bike",
+    name:"XL100",
+},
+{
+    img:"https://images.carandbike.com/bike-images/colors/tvs/raider/tvs-raider-blue.webp?v=10",
+    comp_name:"TVS",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:269,
+    Weekly:1099,
+    monthly:4599,
+    count:5,
+    minimum_billing:"RS 150/4km",
+    type:"Bike",
+    name:"Raider",
+
+},
+{
+    img:"https://images.carandbike.com/bike-images/colors/tvs/scooty-pep-plus/tvs-scooty-pep-plus-revving-red.webp?v=16",
+    comp_name:"TVS",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 150/4km",
+    type:"Moped",
+    name:"Scooty Pep Plus",
+
+},
+{
+    img:"https://images.carandbike.com/bike-images/colors/hero/maestro-edge/hero-maestro-edge-techno-blue.webp?v=35",
+    comp_name:"Hero",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:179,
+    Weekly:899,
+    monthly:3999,
+    count:5,
+    minimum_billing:"RS 150/4km",
+    type:"Moped",
+    name:"Maestro Edge",
+},
+{
+    img:"https://images.carandbike.com/bike-images/colors/tvs/scooty-zest-110/tvs-scooty-zest-110-matte-purple.webp?v=24",
+    comp_name:"TVS",
+    range:"270 Km",
+    excess:"RS 2/km",
+    daily:169,
+    Weekly:799,
+    monthly:3899,
+    count:5,
+    minimum_billing:"RS 100/4km",
+    type:"Moped",
+    name:"Maestro EdgScooty Zest 110",
+},
+]
+
+localStorage.setItem("product_Data",JSON.stringify(DataP));
+let parent=document.getElementById("product_container");
+let Data=JSON.parse(localStorage.getItem("product_Data"));
+// console.log(Data)
+displayData(Data,parent,true)
+let elements=document.getElementsByClassName("checked_value");
+// console.log(elements)
+let arr=[];
+for (let i=0;i<elements.length;i++)
+{
+    elements[i].addEventListener("click",function ()
+    {
+        filterfunction();
+    });
+}
+
+function filterfunction()
+{ 
+
+    let filter_data=[];
+
+    for(let i=0;i<Data.length;i++){
+    	if(elements[0].checked && elements[0].value==Data[i].comp_name){
+    		filter_data.push(Data[i])
+    	}
+    	else if(elements[1].checked&& elements[1].value==Data[i].comp_name){
+    		filter_data.push(Data[i])
+    	}
+    	else if(elements[2].checked&& elements[2].value==Data[i].comp_name){
+    		filter_data.push(Data[i])
+    	}
+    	else if(elements[3].checked&& elements[3].value==Data[i].comp_name){
+    		filter_data.push(Data[i])
+    	}
+    	else if(elements[4].checked&& elements[4].value==Data[i].comp_name){
+    		filter_data.push(Data[i])
+    	}
+    	else if(elements[5].checked&& elements[5].value==Data[i].comp_name){
+    		filter_data.push(Data[i])
+    	}
+    	else if(elements[6].checked&& elements[6].value==Data[i].comp_name){
+    		filter_data.push(Data[i])
+    	}
+    	else if(elements[7].checked&& elements[7].value==Data[i].name){
+    		filter_data.push(Data[i])
+    	}
+    	else if(elements[8].checked&& elements[8].value==Data[i].name){
+    		filter_data.push(Data[i])
+    	}
+    	else if(elements[9].checked&& elements[9].value==Data[i].name){
+    		filter_data.push(Data[i])
+    	}
+    	else if(elements[10].checked&& elements[10].value==Data[i].type){
+    		filter_data.push(Data[i])
+    	}
+    	else if(elements[11].checked&& elements[11].value==Data[i].type){
+    		filter_data.push(Data[i])
+    	}
+    }    
+    console.log(filter_data)
+    if(filter_data.length==0){
+    	filter_data=DataP;
+    }
+    filter_data.sort(function (a,b){
+    	return a.daily -b.daily;
+    })
+
+    console.log(filter_data)
+    displayData(filter_data,parent)
+}
+
+
+
+
+
+
+
+
+function displayData(Data,parent)
+{
+	Data.sort(function (a,b){
+    	return a.daily -b.daily;
+    })
+    parent.innerText=""
+    Data.map((ele)=>{
+        let div=document.createElement("div");
+        let image=document.createElement("img");
+        image.src=ele.img;
+        let tag=document.createElement("div");
+        tag.innerText=ele.count+"left";
+        tag.setAttribute("class","tag_div");
+        let combine=document.createElement("div")
+        combine.append(image,tag)
+        combine.setAttribute("class","img_div")
+        let name=document.createElement("h4");
+        name.innerText=`${ele.comp_name} ${ele.name}`;
+        let combine1=document.createElement("div");
+        let range=document.createElement("span");
+        range.innerText=ele.range;
+        let excess=document.createElement("span");
+        excess.innerText=ele.excess;
+        combine1.append(range,excess);
+        combine1.setAttribute("class","km_div");
+        let combine2=document.createElement("div");
+        combine2.setAttribute("class","end_div");
+        let price=document.createElement("span");
+        price.innerText=`RS ${ele.daily}`;
+        let btn=document.createElement("button");
+        btn.innerText="BOOK NOW";
+        btn.addEventListener("click",()=>{
+            localStorage.setItem("cart_Data",JSON.stringify(ele));
+        })
+        combine2.append(price,btn);
+        div.append(combine,name,combine1,combine2);
+        parent.append(div);
+    })
+}
+
+
+
+</script>

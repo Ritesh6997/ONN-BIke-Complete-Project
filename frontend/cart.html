@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ONN BIKES</title>
+    <link rel="icon" href="https://www.onnbikes.com/img/ONN-logo-unit-without-shadow.png" type="image/gif">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/cart.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="main_div_cart">
+        <div id="cart_container">
+        </div>
+        <div id="pricing_div">
+            <div id="boxu">
+                <div id="start_trip">Start Trip<p></p></div>
+                <div id="end_trip">End Trip<p></p></div>
+            </div>
+            <div id="boxm">
+                <table id="table1m">
+                    <thead>
+                        <th>Refundable Deposit</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>This amount has to be paid at the time of vechicle delivery</td>
+                            <td style="font-weight: 550; color: black;">₹0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2></h2>
+                <p></p>
+            </div>
+            <div id="boxd">
+               <table id="table1d">
+                   <thead>
+                       <th>PRICING</th>
+
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td style="width: 60%;">Tariff(Inclusive of all Taxes)</td>
+                           <td style="width: 40%; text-align: right;" id="total_price" ></td>
+                       </tr>
+                   </tbody>
+                </table>
+                <div id="promo">
+                    <hr>
+                    <input id="Coupon" type="text" placeholder="PROMOCODE">
+                    <button id="done">&#x2714</button>
+                </div>
+                <table id="table2d">
+                    
+                    <tbody>
+                        
+                        <tr>
+                            <td><span><input id="sec" type="checkbox"></span><span style="font-size: 20px;">Insure my ride</span><br><span class="t_c">Covers the rider, pillion and the vehicle</span> <br><a href="https://www.onnbikes.com/policy.html#terms-of-insurance" target="_blank" class="t_c" style="color: #2d3b55; font-size: 10px;">T&C apply</a></td>
+                            <td style="text-align: right" id="haa">₹0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="table3d">
+                    <tbody>
+                        <tr>
+                            <td style="color: black; font-weight: 550;">TOTAL AMOUNT</td>
+                            <td style="text-align: right;"id="tp_vam"></td>
+                        </tr>
+
+ 
+                    </thead>
+                </table>
+            </div>
+            <button id="pay">PAYMENT</button>
+        </div>
+        
+    </div>
+</body>
+</html>
+<script type="module">
+    import displaycart from "./script/displaycart.js"
+    console.log("a",displaycart);
+    let parent_div=document.getElementById("cart_container")
+    let cart_Data=JSON.parse(localStorage.getItem("cart_Data"))||[];
+    console.log(cart_Data);
+    displaycart(cart_Data,parent_div)
+    import header from "./components/header.js"
+    let navbar_div=document.getElementById("navbar");
+    navbar_div.innerHTML= header()
+    
+    let loc=document.querySelector("#enter_location");
+    // loc.innerHTML="comment me";
+    //Uncoment-----------------------------
+    let stop=JSON.parse(localStorage.getItem("city_and_Landmark"));
+    loc.textContent=stop.landmark_name+" "+stop.stop_name;
+    //-----------------------------------
+    //  welcome --------
+    let Current_UserLogin=JSON.parse(localStorage.getItem("Current_User"));
+    if (Current_UserLogin.length!=0)
+    {
+    document.getElementById("welcome").innerText=Current_UserLogin[0].first_name;
+    }
+</script>
+<script src="./script/cart.js"></script>

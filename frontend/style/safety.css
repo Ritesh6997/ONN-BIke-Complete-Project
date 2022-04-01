@@ -1,0 +1,192 @@
+#container{
+    background-image: url("https://www.onnbikes.com/img/banner.jpg");
+    height: 530px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: auto;
+   
+}
+#first-line{
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    padding-top: 220px;
+    font-weight: bold;
+}
+#sec-line{
+  font-size: 35px;
+    color: white;
+    text-align: center;
+    /* padding-top: 0px; */
+    font-weight: bold;
+    line-height: 0%;
+}
+
+#decription,#dec-2{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top:0px;
+    font-weight: bold;
+    line-height: 0px;
+}
+#advantage{
+    height: 300px;
+    width: 50%;
+    border: 1px solid transparent;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    color: #737373;
+   font-size: 25px;
+   font-weight: bold;
+}
+#red_line{
+    border: 1px solid red;
+    width: 50px;
+    height: 0px;
+    margin: auto;
+}
+#advantage_dec{
+    font-size: 18px;
+}
+/* Ensuring safety  */
+ 
+#text{
+    font-size: 22px;
+    font-weight: bold;
+    color: #737373;
+    margin-left: 35%;
+    
+}
+#grid_box{
+    margin-top: 25px;
+    display: grid;
+    height: 1200px;
+    width: 98%;
+    border: 1px solid transparent;
+    gap: 10px;
+   
+
+}
+#grid_box>div{
+    border: 1px solid transparent;
+    
+}
+#box{
+    display: flex;
+}
+#box>div{
+    height: 100%;
+    width: 50%;
+    gap: 20px;
+    border: 1px solid transparent;
+    text-align: center;
+    font-size: 20px;
+}
+#content_dec{
+    padding: 0px 110px;
+    color: #737373;
+}
+.image_safety{
+    height: 280px;
+    width: 280px;
+}
+#heading{
+    font-weight: bold;
+}
+#first_image{
+    padding-left: 10px;
+}
+#first_row{
+    padding-right: 190px;
+}
+#second_row{
+    padding-left: 200px;
+}
+#third_row{
+  padding-right: 190px;
+}
+#forth_row{
+  padding-left: 200px;
+}
+.text_edit{
+    margin-top: 110px;
+    color: #737373;
+    font-size: 26px;
+    margin-left: 31%;
+}
+#onground_team_container{
+    height: 270px;
+    width: 98%;
+    margin: auto;
+    border: 1px solid transparent;
+    display: flex;
+    margin-top: 30px;
+    gap: 15px;
+}
+#onground_team_container>div{
+    height: 100%;
+    width: 25%;
+    border: 1px solid transparent;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+div>#logo_icon{
+  margin-left: 35%;
+}
+
+#head_h2{
+   text-align: center;
+  color: #737373;
+  padding: 5px;
+}
+#para{
+   font-size: 18px;
+   text-align: center;
+   color: #737373;
+   padding: 10px;
+}
+.text_edit_ben{
+    margin-top: 110px;
+    color: #737373;
+    font-size: 26px;
+    margin-left: 38%;
+}
+#benefit_container{
+    height: 300px;
+    width: 60%;
+    margin: auto;
+    border: 1px solid transparent;
+    display: flex;
+    gap: 15px;
+    margin-top: 100px;
+}
+#benefit_container>div{
+    height: 100%;
+    width: 33%;
+    
+    border: 1px solid transparent;
+}
+.resize_image{
+    height: 70px;
+    width: 70px;
+}
+#benefit_heading{
+    text-align: center;
+}
+
+#benefit_secondLine{
+    height: 300px;
+    width: 45%;
+    border: 1px solid transparent;
+    margin: auto;
+    margin-top: 70px;
+    display: flex;
+    gap: 15px;
+}
+#benefit_secondLine>div{
+    height: 100%;
+    width: 50%;
+    border: 1px solid transparent;
+}

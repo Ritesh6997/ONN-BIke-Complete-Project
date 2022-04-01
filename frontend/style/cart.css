@@ -1,0 +1,189 @@
+body{
+    background-image: url("https://www.onnbikes.com/img/bodybackground.png");
+}
+#main_div_cart{
+display: flex;
+width: 100%;
+margin-top: 100px;
+}
+#cart_container{
+    
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+#pricing_div{
+    width: 35%;
+    margin-left: 1%;
+    /* border: solid black 1px; */
+}
+#cart_container img{
+    width: 400px;
+}
+#boxu{
+    display:flex ;
+    justify-content: space-between;
+}
+#start_trip,#end_trip{
+    font-size: 20px;
+    color: #2d3b55;
+    padding:0px 10px ;
+    margin-bottom: 10px;
+}
+#end_trip{
+    text-align: end;
+}
+#boxm{
+    margin: 5px 0px 5px 5px;
+    border-left: solid #2d3b55 7px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 4px 0px 1px 0px;
+}
+#table1m,#table1d,#table2d,#table3d{
+    width: 100%;
+}
+#boxm th{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(78, 74, 74);
+}
+#boxm td{
+    padding-right: 20px;
+    color: rgb(78, 74, 74);
+    /* border:solid black 1px; */
+
+}
+#boxd{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 5px;
+    margin: 5px 0px 5px 5px;
+
+}
+#boxd th{
+    text-align: left;
+    font-size: 16px;
+    font-weight: 550;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(78, 74, 74);
+    padding: 7px 0px 20px 7px;
+}
+#boxd td{
+    font-size: 16px;
+    padding: 0px 10px 10px 7px;
+    color: rgb(78, 74, 74);
+
+}
+#boxd hr{
+    border: 1px solid white;
+    margin-top: 30px;
+    width: 30%;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+}
+#Coupon{
+    background-color: rgb(243, 240, 240);
+    border: solid 1px grey;
+    border-radius: 25px;
+    padding: 8px; 
+    width: 150px;
+    height: 15px; 
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 0px;
+    
+}
+#promo{
+    display: flex;
+    margin-bottom: 20px;
+}
+#promo button{
+    border-radius: 50%;
+    padding: 0px 15px 0px 15px;
+    height: 35px;
+    border: solid white 1px;
+    background-color: #2d3b55;
+    color: white;
+    margin-top:10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.right{
+    text-align: right;
+}
+
+.t_c{
+    font-size: 10px;
+    color: gray;
+    margin-top: 10px;
+    margin-left: 20px;
+    line-height: 10px;
+}
+#table2d td{
+    line-height: 9px;
+}
+#table2d button{
+    border: solid;
+    margin-left: -10px;
+    margin-top: 15px;
+}
+#table3d{
+    margin-top: 20px;
+}
+#pay{
+    background-color: #2d3b55;
+    color: white;
+    width: 97%;
+    margin-left: 2%;
+    height: 50px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#sec{
+    width: 20px;
+    margin-top: 10px;
+}
+
+.main_div{
+    padding: 10px;
+}
+.main_div h1{
+    color: #2d3b55;
+}
+.main_div h3{
+    color: black;
+    font-size: 24px;
+}
+
+.fine{
+    width: 40%;
+    display: inline-block;
+}
+.fine p{
+    margin: 2px;
+   font-size: 14px;
+   color: gray;
+   
+}
+.location{
+    margin-bottom: 20px;
+}
+.location a{
+    color:#081a3b ;
+    text-decoration: underline;
+}
+.location h3{
+    margin-bottom: 3px;
+}
+.boxlr{
+    width: 30%;
+    display: inline-block;
+    font-size: 14px;
+    color: gray;
+    margin-left:29% ;
+    text-align: right;
+    margin-top: -10px;
+}

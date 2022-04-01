@@ -1,0 +1,226 @@
+   #container-g {
+     width:80%;
+     height: fit-content;
+     margin:auto;
+   }
+    .first-div{
+        margin-left:5px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: space-around;
+        /* border: 1px solid red; */
+    }
+    
+    .google-div,.title,.iphone-div{
+        text-align: center;
+      margin-top: 50px;
+    font-style:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      /* border: 1px solid red; */
+    }
+    img{
+        margin-top:2px;
+        width:140px;
+        border-radius:5px;
+    }
+    #second-div{
+      width:100%;
+      text-align: center;
+      margin-top: 50px;
+      /* margin-left:50px; */
+      /* border: 1px solid red; */
+    }
+    #img-content{      
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        justify-content: space-between;
+    font-style:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+    }
+    #img-content>div{
+        width:100%;
+        height:auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      
+    }
+    #third-div{
+        text-align: center;
+        margin-top:50px;
+        /* border: 1px solid red; */
+
+
+    }
+.img-div{
+    display:grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 20px;
+}
+.img-div>.image{
+    width:20%;
+    margin:5px;
+    height: fit-content;
+
+}
+
+#fourth-div{
+  text-align: center;
+  /* margin-left:-750px; */
+  margin-top:100px;
+  /* border: 1px solid red; */
+
+}
+
+.boxes{
+    display:grid;
+    grid-template-columns: repeat(2,50%);
+    margin-bottom:10px ;
+}
+.box1,.box2{
+    padding: 10px;
+    margin: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* text-align:left; */
+}
+.anchor{
+   text-decoration: none;
+   color:blue 
+}
+
+
+#fourth-div>.bikes{
+    text-align: center;
+    width:100%;
+    height:350px;
+}
+ .bikes>h2{
+   margin-bottom: 10px;
+    margin-left:5% ;
+    text-align:center;
+    /* width:20%; */
+    height: fit-content;
+    font-style:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+.bikes>div>div{
+    padding: 10px;
+    height:200px;
+    display:inline-block;
+    margin-left: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#form-city {
+  text-align: center;
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+  width: 100%;
+}
+#title-bar {
+  text-align: center;
+}
+#submit-button{
+  border:none;
+  width: 100%;
+  height:50px;
+  background-color: rgb(12, 12, 71);
+  color:white;
+  padding: 10px;
+}
+form {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.form-name {
+  display: flex;
+}
+input {
+  width: 100%;
+  height: 30px;
+  /* border-left: 1px solid black; */
+}
+.first-name,
+.last-name,
+.email-icon,
+.phone-icon{
+  width: 100%;
+  height: 30px;
+}
+
+.message-icon {
+  border: 1px solid black;
+}
+#textarea {
+  border: none;
+ 
+}
+#select {
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+}
+#accordionFlushExample{
+ flex:10;
+ text-align: center;
+}
+
+
+@media only screen and (max-width:768px) {
+
+  .first-div{
+    grid-template-columns: repeat(1,1fr);
+  }
+  #img-content{
+    grid-template-columns: repeat(1,1fr);
+  }
+  #third-div{
+    text-align: center;
+  }
+  .img-div{
+    grid-template-columns: repeat(1,1fr);
+   margin-left:39%;
+  }
+  #title-bar{
+    margin-top:50px;
+  }
+  #form-city{
+    text-align: center;
+    width:100%;
+    border:1px solid black;
+    grid-template-columns: repeat(1,1fr)
+  }
+  #form-city>.form-box, #textarea{
+    width:85%;
+    margin:auto;
+  }
+
+  #fourth-div{
+    width:80%;
+    margin:auto;
+    /* border: 1px solid red; */
+    margin-top: 600px;
+    grid-template-columns: repeat(1,1fr)
+  }
+/* .title4 {
+  margin-top: 100px;
+} */
+
+   .boxes{
+     grid-template-columns: repeat(1,1fr);
+     width:50%;
+     text-align: left;
+     margin-left:130px;
+   }
+   .bikes>div>div{
+    display:flex;
+    flex-direction: column;
+     
+   }
+
+} 
+

@@ -1,0 +1,202 @@
+   #container_form{
+     width:80%;
+     margin: auto;
+   }
+    .first-div{
+        margin-left:5px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: space-around;
+        /* border: 1px solid red; */
+    }
+    
+    .google-div,.title,.iphone-div{
+        text-align: center;
+      margin-top: 50px;
+    font-style:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      /* border: 1px solid red; */
+    }
+    img{
+        margin-top:2px;
+        width:140px;
+        border-radius:5px;
+    }
+    #second-div{
+      width:100%;
+      text-align: center;
+      margin-top: 50px;
+      /* margin-left:50px; */
+      /* border: 1px solid red; */
+    }
+    #img-content{      
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        justify-content: space-between;
+    font-style:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+    }
+    #img-content>div{
+        width:100%;
+        height:auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      
+    }
+    #third-div{
+        text-align: center;
+        margin-top:50px;
+        /* border: 1px solid red; */
+
+
+    }
+.img-div{
+    display:grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 20px;
+}
+.img-div>.image{
+    width:20%;
+    margin:5px;
+    height: fit-content;
+
+}
+
+#fourth-div{
+  text-align: center;
+  margin-left:-750px;
+  margin-top:50px;
+  /* border: 1px solid red; */
+
+}
+
+.boxes{
+    display:grid;
+    grid-template-columns: repeat(2,50%);
+}
+.box1,.box2{
+    margin: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align:left;
+}
+.anchor{
+   text-decoration: none;
+   color:blue 
+}
+
+
+#fourth-div>.bikes{
+    text-align: center;
+    width:100%;
+    height:350px;
+}
+ .bikes>h2{
+    margin-left:5% ;
+    text-align:center;
+    /* width:20%; */
+    height: fit-content;
+    font-style:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+.bikes>div>div{
+    /* width:50%; */
+    height:200px;
+    display:inline-block;
+    margin-left: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#form-city {
+  margin-left: 5px;
+  text-align: center;
+  /* border: 1px solid red; */
+  display: grid;
+  width: 100%;
+  height: 450px;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+}
+#title-bar {
+  text-align: center;
+}
+form {
+  padding: 2px;
+}
+.form-name {
+  display: flex;
+  padding: 2px;
+}
+input {
+  width: 85%;
+  height: 20px;
+  border: none;
+  border-left: 1px solid black;
+}
+.first-name,
+.last-name,
+.email-icon,
+.phone-icon,
+.place {
+  width: 100%;
+  height: 30px;
+  border: 1px solid black;
+  margin: 2px;
+}
+
+.message-icon {
+  border: 1px solid black;
+}
+#textarea {
+  border: none;
+  border-left: 1px solid black;
+}
+#select {
+  margin-left: -10%;
+  margin-top: 4px;
+}
+
+
+@media only screen and (max-width:768px) {
+
+  .first-div{
+    margin-left:15%;
+    grid-template-columns: repeat(1,1fr);
+  }
+  #second-div{
+    margin-left:7%;
+  }
+  #img-content{
+    grid-template-columns: repeat(1,1fr);
+  }
+  #third-div{
+    margin-left:12%;
+    text-align: center;
+  }
+  .img-div{
+    grid-template-columns: repeat(1,1fr);
+   margin-left:39%;
+  }
+  #form-city{
+    text-align: center;
+    grid-template-columns: repeat(1,1fr)
+  }
+  #fourth-div{
+    grid-template-columns: repeat(1,1fr)
+  }
+.title4 {
+margin-left: 800px;
+}
+.ptags{
+  margin-left: 800px;
+}
+   .boxes{
+     grid-template-columns: repeat(1,1fr);
+     width:30%;
+     margin-left:900px;
+   }
+.bikes{
+  margin-left:350px;
+}
+} 
+

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ONN BIKES</title>
+    <link rel="icon" href="https://www.onnbikes.com/img/ONN-logo-unit-without-shadow.png" type="image/gif">
+
+    <link rel="stylesheet" href="./style/payment.css">
+</head>
+<style>
+.flex_div,.flex_div_background{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.text_div{
+    text-align: left;
+    padding: 0 15px;
+    line-height:0%;
+    margin-top: -10px;
+    font-size: 14px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.flex_div_background{
+    background-color: #eeeded;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    height: 40px;
+    align-items: center;
+}
+.startend{
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 10px;
+margin-top: 10px;
+}
+h3{
+    font-weight: lighter;
+}
+h2{
+    font-weight: lighter;
+}
+
+</style>
+<body>
+
+    <div id="Py-container">
+        <div id="py-option">
+            <div class="py-inner">
+                <h3 class="h3">Payment Option</h3>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://www.onnbikes.com/img/ic_cc_avenue.png" width="32" height="32" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p style="color: teal;">Pay Using CC Avenue</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://www.onnbikes.com/img/PAYTM.png" width="48" height="21" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p style="color: purple">Paytm</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://www.onnbikes.com/img/PHONEPE.png" width="32" height="32" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p style="color: purple"> PhonePe/BHIM UPI </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://www.onnbikes.com/img/upi.svg" width="41" height="41" alt="">
+                    </div>
+                    <div class="card-input">
+                        <input  id="upi"  placeholder="Enter UPI address"
+                            style="border: none; border-bottom: 1px solid black; width: 200%; font-size: 15px;"
+                            type="text">
+                    </div>
+                    <div class="card-text">
+                        <button onclick="checkdetails()" class="btn-go" style="margin-left: 220px;">Go</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://www.onnbikes.com/img/MOBIKWIK.png" width="58" height="25" alt="">
+                    </div>
+                    <div class="card-text">
+                        <p style="color: teal;"> MobiKwik </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="py-booking">
+            <div class="boo-inner">
+                <h3 class="h3">Booking Details</h3>
+                <div class="boo-details">
+                    <div class="bike-info">
+                        <div class="bike-name">
+                            <div class="boo-left">
+                                <h5 id="comp_name" style="margin: 0;"></h5>
+                                <h4 id="bike_name" style="margin: 0;"></h4>
+                            </div>
+                            <div class="boo-right">
+                                
+                            </div>
+                        </div>
+
+                        <div class="bike-time">
+                            <div class="bike-time-inner">
+                                <div class="flex_div startend"><span>Start Trip</span> <span>End Trip</span></div>
+                                <div class="flex_div"><span id="start_trip"></span> <span id="End_trip"></span></div>
+
+                            </div>
+                        </div>
+
+                        <div class="bike-status">
+                            <h2 style="font-weight: bold;">PICKUP & RETURN LOCATION</h2>
+                        </div>
+                    </div>
+
+                    <div class="bike-py-details">
+                        <div class="flex_div_background" ><h2>Payment Breakdown</h2></div>
+                        <div class="flex_div"><h3>Tariff</h3> <h3 id="inclusive_amount"></h3></div>
+                        <div class="text_div">Inclusive of all taxes </div>
+                        <div class="flex_div_background"> <h2 id="">Payable Amount</h2> <h2 id="PayingAmount"></h2> </div>
+                        <div style="height:30px; align-items: center;"><h3 class="flex_div">Other Details</h3></div>
+                        <div id="details-div" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                            <div class="flex_div"> <h3>Kilometers Eligible</h3> <h3>192 Km</h3></div>
+                            <div class="text_div">
+                            The number of kms you can ride at no extra change
+                             </div>
+                            <div class="flex_div">
+                                <h3>Excess Kms Fare</h3> <h3>₹2/km</h3>
+                            </div>
+                            <div class="text_div">
+                                You can ride the eligible km for free excluding fuel
+                            </div>
+                            <div class="flex_div"><h3>Speed Limit</h3><h3>75km/hr</h3></div>
+                            <div class="text_div">Penalty applicable in case of violation </div>
+                            <div class="flex_div"><h3>Late Return (first two hours of delay)</h3> <h3>₹100</h3></div>
+                            <div class="text_div">11/hour after two hours of delay</div>
+                            <div class="flex_div"><h4>Excludes fuel</h4><h4>Includes all taxes</h4></div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    let finalprice=localStorage.getItem("Final_price");
+    let Data=JSON.parse(localStorage.getItem("cart_Data"));
+    document.getElementById("PayingAmount").innerText="₹"+finalprice;
+    document.getElementById("inclusive_amount").innerText=`₹ ${finalprice-19}`;
+    document.querySelector(".boo-right").innerText="₹"+finalprice;
+    document.getElementById("comp_name").innerText=Data[0].comp_name;
+    document.getElementById("comp_name").style.textAlign="left";
+    document.getElementById("bike_name").innerText=Data[0].name;
+    let endDate=JSON.parse(localStorage.getItem("enddate"));
+    let startDate=JSON.parse(localStorage.getItem("startdate"));
+    function checkdetails()
+    {
+        emailvalue=document.getElementById("upi").value;
+        if (emailvalue=="customer@gmail.com")
+        {
+            window.location.href="./otp.html"
+        }
+    }
+    document.getElementById("start_trip").innerText=startDate
+    document.getElementById("End_trip").innerText=endDate
+
+</script>
