@@ -9,3 +9,5 @@
         }
     };
          Data();
+
+export default Data;
