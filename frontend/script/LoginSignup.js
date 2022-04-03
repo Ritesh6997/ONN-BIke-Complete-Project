@@ -1,13 +1,11 @@
 let toggle=document.querySelector(".gayab_vam").addEventListener("click",jadu);
     let toggle_div=document.querySelector("#toggle_vam").addEventListener("click",jadu);
     function jadu(){
-        //console.log("jadu")
         document.querySelector("#login_vam").style.display="none";
         document.querySelector("#signup_vam").style.display="block";
     }
     let toggle2=document.querySelector(".gayab2_vam").addEventListener("click",jadu2);
     function jadu2(){
-        //console.log("jadu")
         document.querySelector("#login_vam").style.display="block";
         document.querySelector("#signup_vam").style.display="none";
     }
@@ -45,8 +43,18 @@ let toggle=document.querySelector(".gayab_vam").addEventListener("click",jadu);
     );
     let data = await res.json();
     console.log("data", data);
+    
+    if(data.token){
+      alert("Signup-Succesfull");
+      //Diverting to Login
+        jadu2();
+    }
+    else{
+      alert("Email is already Register")
+    }
   
 }catch (err) {
+  
     console.log("err", err);
   }
 };
@@ -74,26 +82,29 @@ let toggle=document.querySelector(".gayab_vam").addEventListener("click",jadu);
         );
         let data = await res.json();
         console.log("data", data);
-        // getUser(login_data.username, data.token);
+        if (data.token){
+      
+          const cur_user=[{token:data.token,first_name:data.user.firstName,userId:data.user._id}]
+          
+          console.log(cur_user);
+          localStorage.setItem("Current_User",JSON.stringify(cur_user));
+          window.location.href="./index.html"
+        }
+        else{
+          alert("Invalid Email or Password ")
+        }
+       
       } catch (err) {
         console.log("err", err);
       }
    }
-  //  let getUser = async (username, token) => {
-  //   try {
-  //     let res = await fetch(
-  //       `https://masai-api-mocker.herokuapp.com/user/${username}`,{
-        
-  //         headers: {
-  //           "Content-Type": `application/json`,
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       }
-  //     );
-  //     let data = await res.json();
-  //     console.log("data", data);
-  //   } 
-  //   catch (err) {
-  //     console.log("err", err);
-  //   }
-  // };
+  let Current_User=JSON.parse(localStorage.getItem("Current_User"));
+    function signOut()
+  {
+    localStorage.removeItem("Current_User");
+  }
+  // signOut();
+
+  
+
+ 

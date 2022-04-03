@@ -1,9 +1,24 @@
 
     let start_date_div=document.querySelector("#start_trip p");
     let end_date_div=document.querySelector("#end_trip p");
-    start_date=JSON.parse(localStorage.getItem("startdate"))
-    end_date=JSON.parse(localStorage.getItem("enddate"))
-    let item_data=JSON.parse(localStorage.getItem("cart_Data"));
+    let start_date=JSON.parse(localStorage.getItem("startdate"))
+    let end_date=JSON.parse(localStorage.getItem("enddate"))
+    
+
+    let Current_User= JSON.parse(localStorage.getItem("Current_User"))
+    let find=Current_User[0].userId
+    async function dta(){
+        try {
+            const res= await fetch(`http://localhost:5000/cart/${find}`);
+            const Datra=await res.json();
+            return [Datra.productId];
+        } catch (error) {
+            console.log({message:error.message});
+        }
+    }
+    const sat=await dta();
+    let item_data=sat;
+   console.log(sat);
     console.log("item",item_data);
     let x= new Date(start_date);
     var month_start= x.getUTCMonth() + 1;

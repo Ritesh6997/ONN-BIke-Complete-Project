@@ -1,4 +1,4 @@
-/*
+
 var places=[
     {
         city:"BANGALURU",
@@ -70,16 +70,3 @@ var places=[
 
 //Saving it to local Storage
 localStorage.setItem("Places_Data",JSON.stringify(places));
-*/
-
-async function bikesData(){
-    try {
-        let res=await fetch(`http://localhost:5000/products`);
-        let data= await res.json();
-        localStorage.setItem("bikes_Datas",JSON.stringify(data));
-       } catch (error) {
-        console.log({message:error.message});
-    }
-};
-
-bikesData();

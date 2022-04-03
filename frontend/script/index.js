@@ -45,12 +45,19 @@ function savedate(){
   let selecttag_div=document.getElementById("selecttag_div").value;
   let startdate=document.getElementById('startdate').value;
   let enddate=document.getElementById('enddate').value; 
-if (selecttag_div!=""&&startdate!=""&&enddate!="")
+  let token=JSON.parse(localStorage.getItem("Current_User"))
+if (selecttag_div!=""&&startdate!=""&&enddate!="" )
 {
+  if (token){
+    console.log(1);
     console.log(startdate,enddate)
     localStorage.setItem('startdate',JSON.stringify(startdate));
     localStorage.setItem('enddate',JSON.stringify(enddate));
     window.location.href='./product.html'
+}
+else{
+  alert("Please Login to Continue");
+}
 }
 else{
     alert ("All filed are Mandatory");

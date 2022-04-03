@@ -83,8 +83,19 @@
     import displaycart from "./script/displaycart.js"
     console.log("a",displaycart);
     let parent_div=document.getElementById("cart_container")
-    let cart_Data=JSON.parse(localStorage.getItem("cart_Data"))||[];
-    console.log(cart_Data);
+    
+    let Current_User= JSON.parse(localStorage.getItem("Current_User"))
+    let find=Current_User[0].userId
+    async function dta(){
+        try {
+            const res= await fetch(`http://localhost:5000/cart/${find}`);
+            const Datra=await res.json();
+            return [Datra.productId];
+        } catch (error) {
+            console.log({message:error.message});
+        }
+    }
+    let cart_Data=await dta();
     displaycart(cart_Data,parent_div)
     import header from "./components/header.js"
     let navbar_div=document.getElementById("navbar");
@@ -103,4 +114,4 @@
     document.getElementById("welcome").innerText=Current_UserLogin[0].first_name;
     }
 </script>
-<script src="./script/cart.js"></script>
+<script type="module" src="./script/cart.js"></script>
