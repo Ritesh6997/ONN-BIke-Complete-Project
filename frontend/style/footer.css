@@ -1,0 +1,135 @@
+
+ #footer_{ 
+    width: 300%;
+     height: 810px;
+     background-color: #474747;
+     background-image: url('https://www.onnbikes.com/img/bodybackground.png');
+
+ }
+
+ .f-container_ { 
+    width: 80%;
+     margin: auto;
+     padding: 10px;
+ }
+
+ .row1_ {
+     height: 150px;
+
+     width: 100%;
+     display: flex;
+     color: #ffffff;
+     padding: 15px;
+ }
+
+
+
+ .row2_ {
+     height: 500px;
+
+     width: 100%;
+     color: #ffffff;
+     padding: 15px;
+ }
+
+
+ .seoheading {
+     font-weight: 700;
+     box-sizing: border-box;
+     font-family: Montserrat, sans-serif;
+     line-height: 28px;
+     font-size: 15px;
+
+ }
+
+ .col-sm_> p {
+     font-size: 13px;
+     font-family: Montserrat, sans-serif;
+     margin-top: 4px;
+     margin-bottom: 9px;
+     color: #ffffff;
+     
+ }
+
+ .row3_ {
+     height: 100px;
+
+     width: 100%;
+     margin-top: 25px;
+
+ }
+
+ .f-left_ { 
+    width: 60%;
+     height: 100%;
+     display: flex;
+
+ }
+
+ .f-right_ { 
+    width: 40%;
+     height: 100%;
+
+ }
+
+ .col-left_ { 
+    width: 33%;
+     height: 100%;
+
+ }
+
+ .span-headign_ {
+     font-size: 18px;
+     font-family: Montserrat, sans-serif;
+     font-weight: 400;
+ }
+
+ .col-left_2 { 
+    width: 100%;
+     height: 100%;
+     list-style-type: none;
+     padding: 0;
+     font-family: Montserrat, sans-serif;
+     font-weight: 300;
+     line-height: 20px;
+     font-size: 12px;
+     
+
+ }
+
+ .des_ {
+     margin: 0;
+     font-family: Montserrat, sans-serif;
+     line-height: 19px;
+     font-size: 11px;
+     text-transform: uppercase;
+     color: #ffffff;
+     box-sizing: border-box;
+ }
+
+ .social-icon {
+     display: flex;
+     padding-left: 0;
+ }
+ .icon_{
+     list-style-type: none;
+     margin-right: 10px;
+     border: 3px solid #ffffff;
+     border-radius: 200px;
+     padding: 4px;
+     background-color: #ffffff;
+     color: black;
+     font-weight: 600;
+     
+
+ }
+
+ .pop_hiring {
+     background-color: #1DBDC0;
+     margin: 0px 0px 0px 10px;
+     padding: 1px 10px;
+     font-family: Montserrat, sans-serif;
+     color: #ffffff;
+     border-radius: 5px;
+     cursor: pointer;
+ }

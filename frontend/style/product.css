@@ -1,0 +1,120 @@
+
+body{
+    background-image: url("	https://www.onnbikes.com/img/bodybackground.png");
+}
+#main_container,#fliter_div,.end_div,#product_container>div,.img_div{
+    display: flex;
+    justify-content: space-around;
+}
+#fliter_div{
+    width: 15%;
+    padding-left: 1%;
+    height: 400px;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#product_container{
+width: 80%;
+height: 420px;
+overflow-y: scroll;
+display: grid;
+grid-template-columns:repeat(4,1fr) ;
+grid-gap: 20px;
+}
+#product_container>div{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    flex-direction: column;
+    padding: 10px 15px;
+    max-height:400px;
+}
+#product_container>div:hover{
+    border: 1px solid rgb(189, 178, 178);
+}
+.img_div{
+    height: 60%;
+}
+.img_div img{
+    width: 100%;
+}
+.tag_div{
+    height: 32px;
+    width: fit-content;
+    padding: 5px;
+    text-align:center ;
+    font-size: 1vw;
+    display: inline-block;
+    color: white;
+    background-color: #2dc484;
+}
+
+.end_div span{
+    align-self: center;
+    flex: 5;
+    height: 50px;
+    text-align: center;
+    vertical-align:bottom;
+    font-size:1.5vw;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+.end_div button{
+    flex:5;
+    padding: 0px;
+    height: 50px;
+    font-size: 1.vw;
+    border: 0ch;
+    background-color: rgb(11, 11, 63);
+    color: white;
+}
+.km_div{
+    margin-bottom: 20px;
+}
+.km_div span{
+    margin-right: 10px;
+    color: #a2a2a2;
+}
+#manufacturer,#model,#vehecal_type{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    margin-left:2%;
+    height: 90px;
+    overflow-y: scroll;
+    margin-right: 5px;
+    text-transform: capitalize;
+    }
+#manufacturer div,#model1 div,#vehecal_type div{
+    margin-bottom: 10px;
+}
+#modal_div{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    text-align: center;
+}
+#modal_div>div{
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+#modal_div>div>button{
+    background-color: #00b468;
+    padding: 5px;
+    border: 0px;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#search_div span{
+    vertical-align: center;
+    height: 100%;
+    padding: 20px 20px;
+    font-size: 1.2vw;
+    border: none;
+    width: 280px;  
+}
+
+

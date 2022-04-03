@@ -1,0 +1,88 @@
+/* body{
+  background-color: red;
+} */
+#cont_vam{
+  margin-top: 40px;
+  background-color:none;
+    display: none;
+
+    /* border: solid black 1px; */
+  } 
+    .photo{
+        width: 30%;
+        background-color: rgb(255, 255, 255);
+        margin: 40px;
+        height: 400px; 
+        text-align: center; 
+        transition: transform .2s; /* Animation */
+
+    }
+    .photo:hover{
+      transform: scale(1.1);
+    }
+  
+    #grid1,#grid2,#grid3,#grid4,#grid5,#grid6,#grid7,#grid8,#grid9{
+      display: flex;
+    }
+    #Slider{
+      width: 75%;
+      margin-left: 2%;
+      /* border: solid red 1px; */
+    }
+    .img_div img{
+        width: 100%;
+        height: 160px;
+        margin-bottom: 10px;
+    }
+    .Price_vam{
+      display: flex;
+      /* border: solid black 1px; */
+      height: 38px;
+      justify-content: center;
+    }
+    .Price_vam>h6{
+     margin-top: 2px;
+    }
+    .Price_vam>p,.faltu>p:nth-child(1){
+      color: gray;
+    }
+    .faltu>p:nth-child(2){
+      color: red;
+    }
+    .faltu{
+      /* border: solid red 1px; */
+      margin-top: 10px;
+      line-height: 10px;
+    }
+    #Slider button{
+      width: 20px;
+    }
+    #Slider>button:nth-child(1){
+      margin-left: 95%;
+      /* border: solid white 1px; */
+    }
+    #Place{
+      /* border: solid black 1px; */
+      width: 18%;
+      margin-left: 2%;
+      margin-top: 65px;
+      height: 400px;
+     
+    }
+    #boxu>select{
+      height: 70px;
+      border: none;
+    }
+    #boxd{
+      background-color: white;
+      height: 330px;
+      padding: 20px 0px 0px 0px;
+    }
+    #boxd li{
+      margin-bottom: 20px;
+    }
+    #floatingSelectGrid{
+      background-color: #2d3b55;
+      /* border: 0px; */
+      color: white;
+    }
