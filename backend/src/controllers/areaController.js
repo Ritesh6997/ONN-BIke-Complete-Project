@@ -13,7 +13,7 @@ router.post("",async(req,res)=>{
     }catch(err){
         return res.status(400).send({message:err.message})
     }
-})
+});
 router.get("/:Name",async(req,res)=>{
     try{
         const city=await City.findOne({city:req.params.Name}).lean().exec();

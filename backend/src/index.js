@@ -1,13 +1,16 @@
 const express=require("express");
+
 const app=express();
+
 const cors=require("cors");
+
 app.use(cors());
 const Usercontroller=require("./controllers/userController")
 const productController = require("./controllers/productController")
 const SignupController=require("./controllers/SignupController")
 const loginController=require("./controllers/loginController")
 const passport1 = require("./configu/google-oauth");
-
+const cartController=require("./controllers/cartController");
 const cityController = require("./controllers/cityController");
 const areaController = require("./controllers/areaController");
 const CityId_BikeIdcontroller = require("./controllers/cityIdbikeId.controller");
@@ -18,7 +21,7 @@ app.use("/users", Usercontroller);
 app.use("/Signup", SignupController);
 app.use("/login",loginController);
 app.use("/products", productController);
-
+app.use("/cart",cartController);
 app.use("/cities",cityController);
 app.use("/areas", areaController);
 app.use("/citybikes",CityId_BikeIdcontroller)
