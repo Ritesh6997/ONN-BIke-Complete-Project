@@ -8,6 +8,6 @@
             console.log({message:error.message});
         }
     };
-        //  Data();
+         Data();
 
-export default Data;
+// export default Data;
