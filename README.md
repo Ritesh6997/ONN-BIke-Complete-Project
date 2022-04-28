@@ -18,7 +18,13 @@ Cruising, Sports, even a Scooter is available. you just need a driving license n
    ### Express.js
    ### MongoDb
 
-
+# Features:
+## Sign-in/Sign-up Page
+## Home Page
+## Product Page
+## Cart Page 
+## Checkout Page
+## User Authentication 
 
 
 # Glimpse of our Website-
